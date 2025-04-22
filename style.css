@@ -365,11 +365,7 @@
     .google-review-section p {
         font-size: 1rem; /* Adjust paragraph font size */
     }
-
-    .video-slider video {
-        max-height: 70vh; /* Adjust video height for landscape mode */
-    }
-}
+} /* Close the missing bracket */
 
 /* Portrait mode */
 @media screen and (orientation: portrait) {
@@ -394,11 +390,6 @@
         font-size: 0.5rem; /* Adjust paragraph font size */
     }
 
-    .video-slider video {
-        width: 100%; /* Ensure the video fits the full width of its container */
-        height: auto; /* Maintain aspect ratio */
-        max-height: 60vh; /* Adjust video height for portrait mode */
-    }
 }
 
 
