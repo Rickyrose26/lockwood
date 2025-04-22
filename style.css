@@ -6,7 +6,7 @@
     max-width: 100%; /* Remove any maximum width constraint */
     margin: 0; /* Remove horizontal margins */
     overflow: hidden;
-    margin-top: 60px; /* Add margin to ensure the header does not overlap */
+    margin-top: 100px; /* Move the video slider up */
 }
 
 .video-slider .slides {
@@ -26,12 +26,12 @@
     left: 50%; /* Center horizontally */
     transform: translate(-50%, -50%); /* Adjust for perfect centering */
     font-family: 'Lexend Giga', sans-serif; /* Apply Lexend Giga font */
-    font-size: 3rem; /* Increase font size */
+    font-size: 2rem; /* Reduce font size to ensure all letters fit within the video */
     font-weight: bold; /* Make the font bolder */
     color: white; /* Set text color */
     text-align: center; /* Center the text */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow to make the text pop */
-    padding: 15px 30px; /* Add more padding around the text */
+    padding: 10px 20px; /* Adjust padding for better alignment */
     border-radius: 5px; /* Optional: Add rounded corners */
     max-width: 90%; /* Ensure the text stays within bounds */
     word-wrap: break-word; /* Wrap text if it overflows */
@@ -188,8 +188,8 @@
     }
 
     .video-slider .overlay-text {
-        font-size: 2rem; /* Reduce overlay text size */
-        padding: 10px 20px; /* Adjust padding */
+        font-size: 1.5rem; /* Further reduce font size for tablets */
+        padding: 8px 15px; /* Adjust padding for smaller screens */
     }
 
     .columns {
@@ -214,7 +214,7 @@
     }
 
     .video-slider {
-        margin-top: 200px; /* Adjust margin for smaller screens */
+        margin-top: 150px; /* Adjust margin for tablets */
     }
 
     .responsive-text {
@@ -268,7 +268,7 @@
 
     .video-slider .overlay-text {
         font-size: 1.2rem; /* Further reduce font size for very small mobile devices */
-        padding: 8px 10px; /* Adjust padding for smaller screens */
+        padding: 5px 10px; /* Adjust padding for very small screens */
     }
 
     .google-review-section {
@@ -292,7 +292,7 @@
     }
 
     .video-slider {
-        margin-top: 80px; /* Further adjust margin for very small screens */
+        margin-top: 200px; /* Adjust margin for mobile devices */
     }
 
     .responsive-text {
@@ -340,6 +340,64 @@
 
     .responsive-body {
         background-size: contain; /* Further adjust background size for mobile devices */
+    }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) {
+    .responsive-main {
+        padding: 20px; /* Maintain padding for landscape */
+        margin: 100px auto 60px auto; /* Adjust margins for landscape mode */
+    }
+
+    .header .logo img {
+        max-width: 140px; /* Slightly larger logo for landscape */
+    }
+
+    .nav a {
+        font-size: 1.3rem; /* Adjust font size for navigation links */
+    }
+
+    .google-review-section h2 {
+        font-size: 1.4rem; /* Adjust heading size for landscape */
+    }
+
+    .google-review-section p {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .video-slider video {
+        max-height: 70vh; /* Adjust video height for landscape mode */
+    }
+}
+
+/* Portrait mode */
+@media screen and (orientation: portrait) {
+    .responsive-main {
+        padding: 15px; /* Reduce padding for portrait */
+        margin: 120px auto 40px auto; /* Adjust margins for portrait mode */
+    }
+
+    .header .logo img {
+        max-width: 100px; /* Smaller logo for portrait */
+    }
+
+    .nav a {
+        font-size: 1.1rem; /* Reduce font size for navigation links */
+    }
+
+    .google-review-section h2 {
+        font-size: 1.2rem; /* Adjust heading size for portrait */
+    }
+
+    .google-review-section p {
+        font-size: 0.5rem; /* Adjust paragraph font size */
+    }
+
+    .video-slider video {
+        width: 100%; /* Ensure the video fits the full width of its container */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 60vh; /* Adjust video height for portrait mode */
     }
 }
 
