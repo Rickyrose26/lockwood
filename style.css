@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap');
+
+.video-slider {
+    position: relative;
+    width: 100vw; /* Full width of the viewport */
+    max-width: 100%; /* Remove any maximum width constraint */
+    margin: 0; /* Remove horizontal margins */
+    overflow: hidden;
+    margin-top: 0; /* Ensure no extra space between the logo and the video slider */
+}
+
+.video-slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.video-slider video {
+    width: 100%; /* Make the video fit the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    flex-shrink: 0; /* Prevent shrinking of video elements */
+}
+
+.video-slider .overlay-text {
+    position: absolute;
+    top: 20%; /* Move the text even higher */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for perfect centering */
+    font-family: 'Lexend Giga', sans-serif; /* Apply Lexend Giga font */
+    font-size: 3rem; /* Increase font size */
+    font-weight: bold; /* Make the font bolder */
+    color: white; /* Set text color */
+    text-align: center; /* Center the text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow to make the text pop */
+    padding: 15px 30px; /* Add more padding around the text */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+* {
+    padding: 0; /* Remove all padding */
+    margin: 0; /* Remove all margins */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.logo {
+    display: block;
+    margin: 5px auto; /* Further reduce vertical spacing to make it very close */
+    padding: 0; /* Remove padding to ensure no extra space around the logo */
+    width: auto; /* Adjust the width as needed */
+}
+
+.header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center; /* Center items vertically */
+    position: fixed; /* Keep the header fixed at the top */
+    top: 0; /* Position the header at the top */
+    width: 100%; /* Make the header span the full width */
+    background-color: white; /* Optional: Add a background color */
+    z-index: 1000; /* Ensure the header stays above other elements */
+    padding: 10px 0; /* Add vertical padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.header .logo {
+    margin-left: 20px; /* Add some spacing from the left edge */
+    text-align: left; /* Align the logo text to the left */
+}
+
+.header .logo img {
+    display: inline-block; /* Ensure the image is treated as an inline element */
+    max-width: 150px; /* Set a maximum width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Arrange items in a horizontal row */
+    justify-content: flex-start; /* Align links to the left */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    margin-left: 10px; /* Add a small left margin */
+}
+
+.nav li {
+    margin: 0 15px; /* Add spacing between links */
+}
+
+.nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: black; /* Set link color */
+    font-weight: bold; /* Make the links bold */
+    font-size: 1.5rem; /* Increase font size */
+    padding: 10px 20px; /* Add padding for a larger clickable area */
+    margin-left: 5px; /* Move the "Contact Us" button slightly to the left */
+    cursor: pointer; /* Indicate the button is clickable */
+}
+
+.nav a:hover {
+    text-decoration: underline; /* Add an underline on hover */
+}
+
+.content {
+    text-align: center; /* Center the text horizontally */
+    margin: 20px auto; /* Center the block horizontally and add vertical spacing */
+    max-width: 800px; /* Set a maximum width for the content */
+}
+
+.columns {
+    display: flex; /* Arrange items in a horizontal row */
+    justify-content: space-between; /* Ensure columns are evenly distributed */
+    gap: 5px; /* Add a small gap between columns */
+    margin: 20px auto; /* Center the columns block horizontally */
+    max-width: 1200px; /* Set a maximum width for the container */
+}
+
+.column {
+    flex: 1; /* Ensure all columns take up equal space */
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 0; /* Remove padding inside each column */
+    background-color: #f4f4f4; /* Optional: Add a background color */
+    text-align: center; /* Center the content inside each column */
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    min-height: 400px; /* Increase the minimum height to make the columns bigger */
+    cursor: pointer; /* Make columns clickable */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.column:hover {
+    transform: scale(1.05); /* Enlarge column on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+}
+
+.column1 {
+    background-color: #e3f2fd; /* Light blue background for column 1 */
+}
+
+.column2 {
+    background-color: #fce4ec; /* Light pink background for column 2 */
+}
+
+.column3 {
+    background-color: #e8f5e9; /* Light green background for column 3 */
+}
+
+.column4 {
+    background-color: #fff3e0; /* Light orange background for column 4 */
+}
+
+

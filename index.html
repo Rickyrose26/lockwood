@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Caveat:wght@400..700&family=Great+Vibes&family=Lexend+Giga:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Meow+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        .nav ul li a:hover {
+            color: red;
+        }
+        .nav a:hover {
+            transform: scale(1.1);
+            transition: transform 0.2s ease-in-out;
+        }
+    </style>
+</head>
+
+<header>
+    <div class="header">
+        <div class="logo" style="display: flex; align-items: center; justify-content: space-between;">
+            <img src="./pictures/logo.png" alt="logo">
+            <div style="text-align: left; margin-left: auto;">
+                <span style="color: red; font-weight: bold; font-size: 1.5rem;">Lockwood Construction, LLC</span><br>
+                <span style="color: black; font-size: 1rem;">Home Exterior Experts Serving the Twin Cities Metro Area</span>
+            </div>
+        </div>
+        <div class="nav" style="display: flex; align-items: center; justify-content: flex-start;">
+            <ul style="display: flex; gap: 15px; padding: 0; margin: 0;">
+                <li style="margin: 0; padding: 0;"><a href="./index.html" style="padding: 0;">Home</a></li>
+                <li style="margin: 0; padding: 0;"><a href="./about.html" style="padding: 0;">About</a></li>
+                <li style="margin: 0; padding: 0;"><a href="./services.html" style="padding: 10px;">Services</a></li>
+            </ul>
+            <a href="./contact.html" style="margin-left: 10px; margin-right: 10px; padding: 10px 20px; background-color: red; color: white; text-decoration: none; border-radius: 5px;">Contact Us</a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="video-slider">
+        <div class="slides">
+            <video autoplay muted>
+                <source src="./video/v1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v4.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v7.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <video muted>
+                <source src="./video/v8.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="overlay-text" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: auto; max-width: 90%; word-wrap: break-word; font-size: 2.5rem; font-weight: 900; color: white; text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);">
+            Minnesota leading window, siding, and roofing installation company
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a sample website with a video slider.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>                      
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>       
+    </div>
+
+    <div class="columns" style="padding: 40px; display: flex; gap: 20px;">
+        <a href="gutters.html" class="column column1" style="text-decoration: none;">
+            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
+                <img src="./pictures/g1.jpg" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">GUTTERS</div>
+            </div>
+        </a>
+        <a href="roofing.html" class="column column2" style="text-decoration: none;">
+            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
+                <img src="./pictures/g2.webp" alt="Image 2" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">ROOFING</div>
+            </div>
+        </a>
+        <a href="windows.html" class="column column3" style="text-decoration: none;">
+            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
+                <img src="./pictures/g3.webp" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">WINDOWS</div>
+            </div>
+        </a>
+        <a href="siding.html" class="column column4" style="text-decoration: none;">
+            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
+                <img src="./pictures/g4.webp" alt="Image 4" style="width: 100%; height: 100%; object-fit: cover;">
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">SIDING</div>
+            </div>
+        </a>
+    </div>
+    
+    <div class="google-review-section" style="margin-top: 20px; padding: 20px; border: 2px solid #ddd; border-radius: 10px; background-color: #f9f9f9; width: 95%; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; overflow: hidden; position: relative;">
+        <h2 style="margin-bottom: 15px; font-size: 1.5rem;">What Our Customers Say</h2>
+        <div class="review-carousel" style="white-space: nowrap; transition: transform 0.5s ease;">
+            <div class="review" style="display: inline-block; width: 100%; text-align: center;">
+                <p style="font-size: 1rem; margin-bottom: 10px;">"The contractors were professional and efficient. Highly recommend!"</p>
+                <div style="color: gold; font-size: 1.2rem;">★★★★★</div>
+            </div>
+            <div class="review" style="display: inline-block; width: 100%; text-align: center;">
+                <p style="font-size: 1rem; margin-bottom: 10px;">"Great service and quality work. My roof looks amazing!"</p>
+                <div style="color: gold; font-size: 1.2rem;">★★★★☆</div>
+            </div>
+            <div class="review" style="display: inline-block; width: 100%; text-align: center;">
+                <p style="font-size: 1rem; margin-bottom: 10px;">"Very satisfied with the siding installation. Excellent team!"</p>
+                <div style="color: gold; font-size: 1.2rem;">★★★★★</div>
+            </div>
+        </div>
+        <a href="https://www.google.com/search?q=contractor+reviews" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Read More Reviews</a>
+    </div>
+    <script>
+        const slides = document.querySelector('.slides');
+        const videos = document.querySelectorAll('.slides video');
+        let currentIndex = 0;
+
+        videos.forEach((video, index) => {
+            video.addEventListener('ended', () => {
+                currentIndex = (index + 1) % videos.length;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+                videos[currentIndex].play();
+            });
+        });
+
+        const carousel = document.querySelector('.review-carousel');
+        let reviewIndex = 0;
+
+        setInterval(() => {
+            reviewIndex = (reviewIndex + 1) % 3; // Adjust for the number of reviews
+            carousel.style.transform = `translateX(-${reviewIndex * 100}%)`;
+        }, 3000); // Change review every 3 seconds
+    </script>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2023 Lockwood Construction, LLC. All rights reserved.</p>
+        <p>123 Main Street, Twin Cities, MN | Phone: (555) 123-4567 | Email: info@lockwoodconstruction.com</p>
+        <p>
+            <a href="https://facebook.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Facebook</a>
+            <a href="https://twitter.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Twitter</a>
+            <a href="https://instagram.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>
