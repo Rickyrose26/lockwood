@@ -6,7 +6,7 @@
     max-width: 100%; /* Remove any maximum width constraint */
     margin: 0; /* Remove horizontal margins */
     overflow: hidden;
-    margin-top: 0; /* Ensure no extra space between the logo and the video slider */
+    margin-top: 60px; /* Add margin to ensure the header does not overlap */
 }
 
 .video-slider .slides {
@@ -33,6 +33,8 @@
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow to make the text pop */
     padding: 15px 30px; /* Add more padding around the text */
     border-radius: 5px; /* Optional: Add rounded corners */
+    max-width: 90%; /* Ensure the text stays within bounds */
+    word-wrap: break-word; /* Wrap text if it overflows */
 }
 
 * {
@@ -138,6 +140,13 @@
     overflow: hidden; /* Prevent any part of the image from overflowing */
 }
 
+.responsive-text {
+    font-size: 2.5rem; /* Default font size */
+    text-align: center; /* Center the text */
+    word-wrap: break-word; /* Ensure text wraps properly */
+    max-width: 90%; /* Ensure the text stays within bounds */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .header {
@@ -180,6 +189,18 @@
     .content {
         padding: 10px; /* Add padding for better readability */
     }
+
+    .video-slider video {
+        max-height: 60vh; /* Limit video height to 60% of the viewport height for tablets */
+    }
+
+    .video-slider {
+        margin-top: 200px; /* Adjust margin for smaller screens */
+    }
+
+    .responsive-text {
+        font-size: 1.8rem; /* Reduce font size for tablets */
+    }
 }
 
 @media (max-width: 480px) {
@@ -189,7 +210,8 @@
     }
 
     .video-slider .overlay-text {
-        font-size: 1.5rem; /* Further reduce overlay text size */
+        font-size: 1.2rem; /* Further reduce font size for very small mobile devices */
+        padding: 8px 10px; /* Adjust padding for smaller screens */
     }
 
     .google-review-section {
@@ -206,6 +228,19 @@
 
     .column {
         min-height: 250px; /* Further reduce minimum height */
+    }
+
+    .video-slider video {
+        max-height: 50vh; /* Limit video height to 50% of the viewport height for mobile devices */
+    }
+
+    .video-slider {
+        margin-top: 80px; /* Further adjust margin for very small screens */
+    }
+
+    .responsive-text {
+        font-size: 1rem; /* Further reduce font size for mobile devices */
+        padding: 5px 10px; /* Adjust padding for smaller screens */
     }
 }
 
