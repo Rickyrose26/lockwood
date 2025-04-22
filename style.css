@@ -153,6 +153,19 @@
     word-wrap: break-word; /* Ensure text wraps properly */
 }
 
+.responsive-main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 180px auto 80px auto;
+}
+
+.responsive-body {
+    margin: 0;
+    padding: 0;
+    background-size: cover; /* Ensure background covers the viewport */
+    background-position: center; /* Center the background */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .header {
@@ -215,6 +228,36 @@
     .google-review-section p {
         font-size: 0.9rem; /* Adjust paragraph font size for better readability */
     }
+
+    .responsive-main {
+        padding: 15px; /* Reduce padding for tablets */
+        margin: 120px auto 60px auto; /* Adjust margins for smaller screens */
+    }
+
+    .header .logo img {
+        max-width: 120px; /* Reduce logo size */
+    }
+
+    .header .logo span {
+        font-size: 1.2rem; /* Adjust font size for logo text */
+    }
+
+    main h1, main h2 {
+        font-size: 1.5rem; /* Adjust heading sizes */
+    }
+
+    main p, main ul {
+        font-size: 1rem; /* Adjust paragraph and list font sizes */
+    }
+
+    main div {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 15px; /* Add spacing between sections */
+    }
+
+    .responsive-body {
+        background-size: contain; /* Adjust background size for tablets */
+    }
 }
 
 @media (max-width: 480px) {
@@ -263,6 +306,40 @@
 
     .google-review-section p {
         font-size: 0.8rem; /* Further adjust paragraph font size for smaller screens */
+    }
+
+    .responsive-main {
+        padding: 10px; /* Further reduce padding for mobile devices */
+        margin: 100px auto 40px auto; /* Adjust margins for very small screens */
+    }
+
+    .header .logo img {
+        max-width: 100px; /* Further reduce logo size */
+    }
+
+    .header .logo span {
+        font-size: 1rem; /* Further adjust font size for logo text */
+    }
+
+    .nav a {
+        font-size: 1rem; /* Further reduce font size for navigation links */
+    }
+
+    main h1, main h2 {
+        font-size: 1.2rem; /* Further adjust heading sizes */
+    }
+
+    main p, main ul {
+        font-size: 0.9rem; /* Further adjust paragraph and list font sizes */
+    }
+
+    main div {
+        flex-direction: column; /* Stack sections vertically */
+        gap: 10px; /* Add spacing between sections */
+    }
+
+    .responsive-body {
+        background-size: contain; /* Further adjust background size for mobile devices */
     }
 }
 
