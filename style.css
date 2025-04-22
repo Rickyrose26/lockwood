@@ -147,6 +147,12 @@
     max-width: 90%; /* Ensure the text stays within bounds */
 }
 
+.google-review-section h2 {
+    font-size: 1.5rem; /* Default font size */
+    text-align: center; /* Center the heading */
+    word-wrap: break-word; /* Ensure text wraps properly */
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .header {
@@ -201,6 +207,14 @@
     .responsive-text {
         font-size: 1.8rem; /* Reduce font size for tablets */
     }
+
+    .google-review-section h2 {
+        font-size: 1.2rem; /* Reduce font size for tablets */
+    }
+
+    .google-review-section p {
+        font-size: 0.9rem; /* Adjust paragraph font size for better readability */
+    }
 }
 
 @media (max-width: 480px) {
@@ -241,6 +255,14 @@
     .responsive-text {
         font-size: 1rem; /* Further reduce font size for mobile devices */
         padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .google-review-section h2 {
+        font-size: 1rem; /* Further reduce font size for mobile devices */
+    }
+
+    .google-review-section p {
+        font-size: 0.8rem; /* Further adjust paragraph font size for smaller screens */
     }
 }
 
