@@ -119,34 +119,82 @@
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     padding: 0; /* Remove padding inside each column */
-    background-color: #f4f4f4; /* Optional: Add a background color */
     text-align: center; /* Center the content inside each column */
-    border: 1px solid #ddd; /* Optional: Add a border */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    min-height: 400px; /* Increase the minimum height to make the columns bigger */
+    min-height: 400px; /* Maintain minimum height */
     cursor: pointer; /* Make columns clickable */
     transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
 }
 
 .column:hover {
     transform: scale(1.05); /* Enlarge column on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a shadow for emphasis */
+    box-shadow: none; /* Remove shadow effect */
 }
 
-.column1 {
-    background-color: #e3f2fd; /* Light blue background for column 1 */
+.column img {
+    width: 100%; /* Ensure the image fits the column width */
+    height: 100%; /* Ensure the image fills the column height */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire column */
+    border-radius: 5px; /* Optional: Add rounded corners to match column styling */
+    overflow: hidden; /* Prevent any part of the image from overflowing */
 }
 
-.column2 {
-    background-color: #fce4ec; /* Light pink background for column 2 */
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Allow header items to wrap */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .logo img {
+        max-width: 120px; /* Reduce logo size */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        gap: 10px; /* Add spacing between links */
+    }
+
+    .nav a {
+        font-size: 1.2rem; /* Reduce font size */
+        padding: 8px 15px; /* Adjust padding */
+    }
+
+    .video-slider .overlay-text {
+        font-size: 2rem; /* Reduce overlay text size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .columns {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 20px; /* Add spacing between columns */
+    }
+
+    .column {
+        min-height: 300px; /* Reduce minimum height */
+    }
+
+    .column img {
+        height: auto; /* Adjust height to maintain aspect ratio on smaller screens */
+    }
 }
 
-.column3 {
-    background-color: #e8f5e9; /* Light green background for column 3 */
-}
+@media (max-width: 480px) {
+    .nav a {
+        font-size: 1rem; /* Further reduce font size */
+        padding: 5px 10px; /* Adjust padding */
+    }
 
-.column4 {
-    background-color: #fff3e0; /* Light orange background for column 4 */
+    .video-slider .overlay-text {
+        font-size: 1.5rem; /* Further reduce overlay text size */
+    }
+
+    .google-review-section {
+        padding: 10px; /* Reduce padding */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Reduce footer font size */
+    }
 }
 
 
