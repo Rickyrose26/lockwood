@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<header>
+    <div class="header">
+        <div class="logo" style="display: flex; align-items: center; justify-content: space-between;">
+            <img src="./pictures/logo.png" alt="logo">
+            <div style="text-align: left; margin-left: auto;">
+                <span style="color: red; font-weight: bold; font-size: 1.5rem;">Lockwood Construction, LLC</span><br>
+                <span style="color: black; font-size: 1rem;">Home Exterior Experts Serving the Twin Cities Metro Area</span>
+            </div>
+        </div>
+        <div class="nav" style="display: flex; align-items: center; justify-content: flex-start;">
+            <ul style="display: flex; gap: 15px; padding: 0; margin: 0;">
+                <li style="margin: 0; padding: 0;"><a href="./index.html" style="padding: 0;">Home</a></li>
+                <li style="margin: 0; padding: 0;"><a href="./about.html" style="padding: 0;">About</a></li>
+                <li class="dropdown" style="margin: 0; padding: 0; position: relative;">
+                    <a href="#" style="padding: 0;">Services</a>
+                    <div class="dropdown-content">
+                        <a href="gutters.html">Gutters</a>
+                        <a href="roofing.html">Roofing</a>
+                        <a href="windows.html">Windows</a>
+                        <a href="siding.html">Siding</a>
+                    </div>
+                </li>
+            </ul>
+            <a href="./contact.html" style="margin-left: 10px; margin-right: 10px; padding: 10px 20px; background-color: red; color: white; text-decoration: none; border-radius: 5px; transition: transform 0.2s ease;">Contact Us</a>
+        </div>
+    </div>
+</header>
+<style>
+    a[href="./contact.html"]:hover {
+        transform: scale(1.1); /* Enlarge button on hover */
+    }
+</style>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <main style="flex: 1; padding: 20px; max-width: 800px; margin: 100px auto 0 auto;">
+        <h1>Windows</h1>
+        <p>Discover our energy-efficient window solutions. Enhance your home's aesthetics and reduce energy costs with our premium window installations.</p>
+    </main>
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
+        <p>&copy; 2023 Lockwood Construction, LLC. All rights reserved.</p>
+        <p>123 Main Street, Twin Cities, MN | Phone: (555) 123-4567 | Email: info@lockwoodconstruction.com</p>
+        <p>
+            <a href="https://facebook.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Facebook</a>
+            <a href="https://twitter.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Twitter</a>
+            <a href="https://instagram.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+</html>

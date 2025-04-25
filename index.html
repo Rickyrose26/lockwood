@@ -3,41 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lockwood Construction</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Caveat:wght@400..700&family=Great+Vibes&family=Lexend+Giga:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Meow+Script&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        .nav ul li a:hover {
-            color: red;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            background-color: #ffffff; /* Clean white background */
         }
-        .nav a:hover {
+        .header {
+            padding: 20px;
+            background-color: #d32f2f; /* Rich red for the header */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo img {
+            height: 60px;
+        }
+        .logo div {
+            margin-left: 20px;
+        }
+        .logo span:first-child {
+            color: #ffffff; /* White text for contrast */
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        .logo span:last-child {
+            color: #ffffff; /* White text for tagline */
+            font-size: 1rem;
+        }
+        .nav ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav ul li a {
+            text-decoration: none;
+            color: #ffffff; /* White text for navigation links */
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .nav ul li a:hover {
+            color: #ffcccb; /* Light red on hover */
             transform: scale(1.1);
-            transition: transform 0.2s ease-in-out;
+        }
+        .video-slider {
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+            background-color: #d32f2f; /* Rich red background for vibrancy */
+        }
+        .video-slider video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ffffff; /* White text for overlay */
+            font-size: 2.5rem; /* Larger text for better readability */
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+        .content {
+            padding: 40px;
+            text-align: center;
+            background-color: #f8f8f8; /* Light red background for content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        .columns {
+            padding: 60px 20px;
+            background-color: #d32f2f; /* Rich red background for services section */
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 50px auto;
+            border-radius: 15px;
+        }
+        .columns h2 {
+            font-size: 3rem;
+            color: #ffffff; /* White text for headings */
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .columns p {
+            font-size: 1.2rem;
+            color: #f8f9fa; /* Light white text for readability */
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .columns div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            justify-items: center;
+            align-items: stretch;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .columns a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff; /* White background for service cards */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 20px;
+        }
+        .columns a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            background-color: #ffcccb; /* Light red background on hover */
+            color: #ffffff; /* White text on hover */
+        }
+        .columns .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #d32f2f; /* Rich red background for footer */
+            color: #ffffff; /* White text for footer */
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ffffff; /* White text for footer links */
+            text-decoration: none;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        footer a:hover {
+            color: #ffcccb; /* Light red on hover */
         }
     </style>
 </head>
-
-<header>
-    <div class="header">
-        <div class="logo" style="display: flex; align-items: center; justify-content: space-between;">
-            <img src="./pictures/logo.png" alt="logo">
-            <div style="text-align: left; margin-left: auto;">
-                <span style="color: red; font-weight: bold; font-size: 1.5rem;">Lockwood Construction, LLC</span><br>
-                <span style="color: black; font-size: 1rem;">Home Exterior Experts Serving the Twin Cities Metro Area</span>
-            </div>
-        </div>
-        <div class="nav" style="display: flex; align-items: center; justify-content: flex-start;">
-            <ul style="display: flex; gap: 15px; padding: 0; margin: 0;">
-                <li style="margin: 0; padding: 0;"><a href="./index.html" style="padding: 0;">Home</a></li>
-                <li style="margin: 0; padding: 0;"><a href="./about.html" style="padding: 0;">About</a></li>
-            </ul>
-            <a href="./contact.html" style="margin-left: 10px; margin-right: 10px; padding: 10px 20px; background-color: red; color: white; text-decoration: none; border-radius: 5px;">Contact Us</a>
-        </div>
-    </div>
-</header>
 <body>
+    <header>
+        <div class="header" style="padding: 20px 40px; background-color: #fff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); display: flex; align-items: center; justify-content: space-between;">
+            <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+                <img src="./pictures/logo.png" alt="logo" style="height: 60px;">
+                <div style="text-align: left;">
+                    <span style="color: #e63946; font-weight: bold; font-size: 1.5rem;">Lockwood Construction, LLC</span><br>
+                    <span style="color: #555; font-size: 1rem;">Home Exterior Experts Serving the Twin Cities Metro Area</span>
+                </div>
+            </div>
+            <nav class="nav" style="display: flex; align-items: center; gap: 30px;">
+                <ul style="display: flex; gap: 20px; list-style: none; padding: 0; margin: 0;">
+                    <li><a href="./index.html" style="text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s ease;">Home</a></li>
+                    <li><a href="./about.html" style="text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s ease;">About</a></li>
+                    <li class="dropdown" style="position: relative;">
+                        <a href="#" style="text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s ease;">Services</a>
+                        <div class="dropdown-content" style="display: none; position: absolute; top: 100%; left: 0; background-color: white; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 1000; padding: 10px 0; border-radius: 5px; min-width: 150px;">
+                            <a href="gutters.html" style="display: block; padding: 10px 15px; text-decoration: none; color: #333; font-size: 1rem; font-weight: bold; transition: background-color 0.3s ease;">Gutters</a>
+                            <a href="roofing.html" style="display: block; padding: 10px 15px; text-decoration: none; color: #333; font-size: 1rem; font-weight: bold; transition: background-color 0.3s ease;">Roofing</a>
+                            <a href="windows.html" style="display: block; padding: 10px 15px; text-decoration: none; color: #333; font-size: 1rem; font-weight: bold; transition: background-color 0.3s ease;">Windows</a>
+                            <a href="siding.html" style="display: block; padding: 10px 15px; text-decoration: none; color: #333; font-size: 1rem; font-weight: bold; transition: background-color 0.3s ease;">Siding</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="./contact.html" style="padding: 10px 20px; background-color: #e63946; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background-color 0.3s ease;">Contact Us</a>
+            </nav>
+        </div>
+    </header>
     <div class="video-slider">
         <div class="slides">
             <video autoplay muted>
@@ -62,71 +213,106 @@
             </video>
             <video muted>
                 <source src="./video/v7.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <video muted>
-                <source src="./video/v8.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+                Your browser
         </div>
-        <div class="overlay-text responsive-text" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: auto; max-width: 100%; word-wrap: break-word; font-size: .9rem; font-weight: 900; color: white; text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);">
-            Minnesota leading window, siding, and roofing installation company
+        <div class="overlay-text">
+            Minnesota's Leading Window, Siding, and Roofing Installation Company
         </div>
     </div>
 
     <div class="content">
-        <h1>Welcome to Our Website</h1>
-        <p>This is a sample website with a video slider.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>                      
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>       
+        <h1>Welcome to Lockwood Construction</h1>
+        <p>
+            We specialize in providing high-quality home exterior solutions, including roofing, siding, windows, and gutters. Our team is dedicated to delivering exceptional craftsmanship and customer satisfaction.
+        </p>
     </div>
 
-    <div class="columns" style="padding: 40px; display: flex; gap: 20px;">
-        <a href="gutters.html" class="column column1" style="text-decoration: none;">
-            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
-                <img src="./pictures/g1.jpg" alt="Image 1" style="width: 100%; height: 100%; object-fit: cover;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">GUTTERS</div>
-            </div>
-        </a>
-        <a href="roofing.html" class="column column2" style="text-decoration: none;">
-            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
-                <img src="./pictures/g2.webp" alt="Image 2" style="width: 100%; height: 100%; object-fit: cover;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">ROOFING</div>
-            </div>
-        </a>
-        <a href="windows.html" class="column column3" style="text-decoration: none;">
-            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
-                <img src="./pictures/g3.webp" alt="Image 3" style="width: 100%; height: 100%; object-fit: cover;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">WINDOWS</div>
-            </div>
-        </a>
-        <a href="siding.html" class="column column4" style="text-decoration: none;">
-            <div class="image-container" style="position: relative; width: 100%; height: 100%; overflow: hidden; border-radius: 10px;">
-                <img src="./pictures/g4.webp" alt="Image 4" style="width: 100%; height: 100%; object-fit: cover;">
-                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; font-weight: bold; text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); background: rgba(0, 0, 0, 0.5); padding: 10px 20px; border-radius: 5px;">SIDING</div>
-            </div>
-        </a>
+    <div class="columns" style="text-align: center; max-width: 1100px; margin: 0 auto;">
+        <h2 style="font-size: 2rem; color: #ffffff; margin-bottom: 15px; font-weight: bold;">Our Services</h2>
+        <p style="font-size: 1.2rem; color: #f8f9fa; margin-bottom: 25px; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+            At Lockwood Construction, we provide a wide range of home exterior solutions tailored to your needs. 
+            From durable roofing systems to energy-efficient windows, our services are designed to enhance the beauty, functionality, 
+            and value of your home. Trust our expertise to deliver exceptional results with a commitment to quality and customer satisfaction.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; justify-items: center; align-items: stretch; max-width: 1100px; margin: 0 auto;">
+            <a href="gutters.html" class="column" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; padding: 15px;">
+                <img src="./pictures/g1.jpg" alt="Gutters" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin: 15px 0; font-size: 1.4rem; color: #333; font-weight: 600;">Gutters</h3>
+                <p style="font-size: 1rem; color: #555; text-align: center; line-height: 1.6;">Protect your home from water damage with our durable and efficient gutter systems.</p>
+            </a>
+            <a href="roofing.html" class="column" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; padding: 15px;">
+                <img src="./pictures/g2.webp" alt="Roofing" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin: 15px 0; font-size: 1.4rem; color: #333; font-weight: 600;">Roofing</h3>
+                <p style="font-size: 1rem; color: #555; text-align: center; line-height: 1.6;">Enhance your home's protection and style with our premium roofing solutions.</p>
+            </a>
+            <a href="windows.html" class="column" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; padding: 15px;">
+                <img src="./pictures/g3.webp" alt="Windows" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin: 15px 0; font-size: 1.4rem; color: #333; font-weight: 600;">Windows</h3>
+                <p style="font-size: 1rem; color: #555; text-align: center; line-height: 1.6;">Upgrade your home with energy-efficient windows that combine beauty and functionality.</p>
+            </a>
+            <a href="siding.html" class="column" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; background-color: #fff; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; width: 100%; padding: 15px;">
+                <img src="./pictures/g4.webp" alt="Siding" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px;">
+                <h3 style="margin: 15px 0; font-size: 1.4rem; color: #333; font-weight: 600;">Siding</h3>
+                <p style="font-size: 1rem; color: #555; text-align: center; line-height: 1.6;">Improve your home's exterior with durable and stylish siding options.</p>
+            </a>
+        </div>
     </div>
     
-    <div class="google-review-section" style="margin-top: 20px; padding: 20px; border: 2px solid #ddd; border-radius: 10px; background-color: #f9f9f9; width: 95%; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; overflow: hidden; position: relative;">
-        <h2 style="margin-bottom: 15px; font-size: 1.5rem;">What Our Customers Say</h2>
-        <div class="review-carousel" style="white-space: nowrap; transition: transform 0.5s ease;">
-            <div class="review" style="display: inline-block; width: 100%; text-align: center;">
-                <p style="font-size: 1rem; margin-bottom: 10px;">"The contractors were professional and efficient. Highly recommend!"</p>
-                <div style="color: gold; font-size: 1.2rem;">★★★★★</div>
+    <div class="google-review-section" style="margin-top: 40px; padding: 30px; border: 2px solid #ddd; border-radius: 10px; background-color: #f9f9f9; width: 90%; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center;">
+        <h2 style="margin-bottom: 20px; font-size: 2rem; color: #333;">What Our Customers Say</h2>
+        <div class="review-cards" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+            <div class="review-card" style="flex: 1 1 calc(33.333% - 20px); max-width: calc(33.333% - 20px); background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="./pictures/r1.png" alt="User 1" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 15px;">
+                    <div>
+                        <p style="margin: 0; font-weight: bold; color: #333;">John Doe</p>
+                        <div style="color: gold; font-size: 1rem;">★★★★★</div>
+                    </div>
+                </div>
+                <p style="font-size: 1rem; line-height: 1.6; color: #555;">"The contractors were professional and efficient. Highly recommend!"</p>
             </div>
-            <div class="review" style="display: inline-block; width: 100%; text-align: center;">
-                <p style="font-size: 1rem; margin-bottom: 10px;">"Great service and quality work. My roof looks amazing!"</p>
-                <div style="color: gold; font-size: 1.2rem;">★★★★☆</div>
+            <div class="review-card" style="flex: 1 1 calc(33.333% - 20px); max-width: calc(33.333% - 20px); background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="./pictures/r2.PNG" alt="User 2" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 15px;">
+                    <div>
+                        <p style="margin: 0; font-weight: bold; color: #333;">Jane Smith</p>
+                        <div style="color: gold; font-size: 1rem;">★★★★☆</div>
+                    </div>
+                </div>
+                <p style="font-size: 1rem; line-height: 1.6; color: #555;">"Great service and quality work. My roof looks amazing!"</p>
             </div>
-            <div class="review" style="display: inline-block; width: 100%; text-align: center;">
-                <p style="font-size: 1rem; margin-bottom: 10px;">"Very satisfied with the siding installation. Excellent team!"</p>
-                <div style="color: gold; font-size: 1.2rem;">★★★★★</div>
+            <div class="review-card" style="flex: 1 1 calc(33.333% - 20px); max-width: calc(33.333% - 20px); background-color: white; border: 1px solid #ddd; border-radius: 10px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: left;">
+                <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                    <img src="./pictures/r4.png" alt="User 3" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover; margin-right: 15px;">
+                    <div>
+                        <p style="margin: 0; font-weight: bold; color: #333;">Emily Johnson</p>
+                        <div style="color: gold; font-size: 1rem;">★★★★★</div>
+                    </div>
+                </div>
+                <p style="font-size: 1rem; line-height: 1.6; color: #555;">"Very satisfied with the siding installation. Excellent team!"</p>
             </div>
         </div>
-        <a href="https://www.google.com/search?q=contractor+reviews" target="_blank" style="display: inline-block; margin-top: 15px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px;">Read More Reviews</a>
+        <a href="https://www.google.com/search?q=Lockwood+Construction+LLC+reviews" target="_blank" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; text-decoration: none; border-radius: 5px; font-weight: bold;">Read More Reviews</a>
     </div>
+    
+    <footer>
+        <p>&copy; 2023 Lockwood Construction, LLC. All rights reserved.</p>
+        <p>123 Main Street, Twin Cities, MN | Phone: (555) 123-4567 | Email: info@lockwoodconstruction.com</p>
+        <p>
+            <a href="https://facebook.com" target="_blank" style="margin-right: 10px;">
+                <img src="./pictures/fb.png" alt="Facebook" style="width: 24px; height: 24px;">
+            </a>
+            <a href="https://twitter.com" target="_blank" style="margin-right: 10px;">
+                <img src="./pictures/xtwitter.jpg" alt="Twitter" style="width: 24px; height: 24px;">
+            </a>
+            <a href="https://instagram.com" target="_blank" style="margin-right: 10px;">
+                <img src="./pictures/insta.png" alt="Instagram" style="width: 24px; height: 24px;">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+                <img src="./pictures/link.png" alt="LinkedIn" style="width: 24px; height: 24px;">
+            </a>
+        </p>
+    </footer>
     <script>
         const slides = document.querySelector('.slides');
         const videos = document.querySelectorAll('.slides video');
@@ -147,17 +333,18 @@
             reviewIndex = (reviewIndex + 1) % 3; // Adjust for the number of reviews
             carousel.style.transform = `translateX(-${reviewIndex * 100}%)`;
         }, 3000); // Change review every 3 seconds
-    </script>
 
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px; margin-top: 40px;">
-        <p>&copy; 2023 Lockwood Construction, LLC. All rights reserved.</p>
-        <p>123 Main Street, Twin Cities, MN | Phone: (555) 123-4567 | Email: info@lockwoodconstruction.com</p>
-        <p>
-            <a href="https://facebook.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Facebook</a>
-            <a href="https://twitter.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Twitter</a>
-            <a href="https://instagram.com" target="_blank" style="color: white; text-decoration: none; margin-right: 10px;">Instagram</a>
-            <a href="https://linkedin.com" target="_blank" style="color: white; text-decoration: none;">LinkedIn</a>
-        </p>
-    </footer>
+        // Show dropdown on hover
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+
+        dropdown.addEventListener('mouseenter', () => {
+            dropdownContent.style.display = 'block';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+            dropdownContent.style.display = 'none';
+        });
+    </script>
 </body>
 </html>

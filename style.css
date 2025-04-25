@@ -101,16 +101,65 @@
     text-decoration: underline; /* Add an underline on hover */
 }
 
+.nav {
+    position: relative; /* Ensure dropdown is positioned relative to the nav */
+}
+
+.nav .dropdown {
+    position: relative;
+}
+
+.nav .dropdown-content {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Position below the parent */
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+    border-radius: 5px;
+    min-width: 150px;
+}
+
+.nav .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.nav .dropdown-content a:hover {
+    background-color: #f0f0f0;
+    color: red;
+}
+
+.nav .dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on hover */
+}
+
 .content {
     text-align: center; /* Center the text horizontally */
     margin: 20px auto; /* Center the block horizontally and add vertical spacing */
     max-width: 800px; /* Set a maximum width for the content */
 }
 
+.our-services {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below the section */
+    font-size: 1.5rem; /* Set a larger font size */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Set text color */
+}
+
 .columns {
     display: flex; /* Arrange items in a horizontal row */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: space-between; /* Ensure columns are evenly distributed */
-    gap: 5px; /* Add a small gap between columns */
+    gap: 20px; /* Add spacing between columns */
     margin: 20px auto; /* Center the columns block horizontally */
     max-width: 1200px; /* Set a maximum width for the container */
 }
